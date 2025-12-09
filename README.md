@@ -1,4 +1,4 @@
-# gr33njj.dev — Multitool Engineer Portfolio
+# gr33njj.dev — Multitool Engineer My Portfolio
 
 ![Status](https://img.shields.io/website?url=https%3A%2F%2Fgr33njj.dev&style=for-the-badge&label=gr33njj.dev)
 ![Tech](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js)
@@ -92,4 +92,4 @@ Content goes here...
 
 ## 📄 License
 
-MIT © [gr33njj](https://github.com/gr33njj)
+MIT License © [gr33njj](https://github.com/gr33njj)
