@@ -7,6 +7,7 @@ type Language = "en" | "ru";
 interface LanguageContextType {
   lang: Language;
   toggleLang: () => void;
+  setLanguage: (lang: Language) => void;
   t: (en: string, ru: string) => string;
 }
 
@@ -22,10 +23,13 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     setMounted(true);
   }, []);
 
-  const toggleLang = () => {
-    const newLang = lang === "en" ? "ru" : "en";
+  const setLanguage = (newLang: Language) => {
     setLang(newLang);
     localStorage.setItem("lang", newLang);
+  };
+
+  const toggleLang = () => {
+    setLanguage(lang === "en" ? "ru" : "en");
   };
 
   const t = (en: string, ru: string) => {
@@ -34,7 +38,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   };
 
   return (
-    <LanguageContext.Provider value={{ lang, toggleLang, t }}>
+    <LanguageContext.Provider value={{ lang, toggleLang, setLanguage, t }}>
       {children}
     </LanguageContext.Provider>
   );

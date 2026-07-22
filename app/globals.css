@@ -4,12 +4,16 @@
 
 @layer base {
   :root {
-    --background: 5 5 5;
-    --foreground: 255 255 255;
+    --background: 5 6 13;
+    --foreground: 233 240 255;
+  }
+
+  html {
+    scroll-behavior: smooth;
   }
 
   body {
-    @apply bg-background text-white antialiased selection:bg-accent/30 selection:text-white;
+    @apply bg-background text-foreground antialiased selection:bg-accent/30 selection:text-white;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 
@@ -21,28 +25,60 @@
     @apply bg-background;
   }
   ::-webkit-scrollbar-thumb {
-    @apply bg-border rounded-full hover:bg-accent/50 transition-colors;
+    border-radius: 999px;
+    background: rgba(140, 180, 240, 0.18);
   }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(103, 232, 249, 0.4);
+  }
+}
+
+/* Scroll reveal */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s cubic-bezier(0.2, 0.7, 0.2, 1),
+    transform 1s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+[data-reveal].in {
+  opacity: 1;
+  transform: none;
 }
 
 @layer utilities {
-  .text-glow {
-    text-shadow: 0 0 20px rgba(154, 19, 232, 0.5);
-  }
-  
-  .border-gradient {
-    border: 1px solid transparent;
-    background: 
-      linear-gradient(var(--background), var(--background)) padding-box, 
-      linear-gradient(45deg, rgba(154,19,232,0.5), transparent 40%) border-box;
+  .text-gradient-ice {
+    background: linear-gradient(100deg, #67e8f9, #a855f7, #38bdf8, #67e8f9);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
-  .bg-grid-pattern {
-    background-size: 40px 40px;
-    background-image: 
-      linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
+  .bg-grid-ice {
+    background-image: linear-gradient(rgba(120, 160, 220, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(120, 160, 220, 0.05) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
+
+  .glass-card {
+    background: rgba(140, 180, 240, 0.045);
+    border: 1px solid rgba(140, 180, 240, 0.12);
+    backdrop-filter: blur(10px);
   }
 }
 
+/* Horizontal snap gallery without visible scrollbar */
+.gscroll {
+  scroll-snap-type: x proximity;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.gscroll::-webkit-scrollbar {
+  display: none;
+}
 
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+  }
+}

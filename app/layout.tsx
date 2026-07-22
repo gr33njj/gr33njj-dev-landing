@@ -3,31 +3,33 @@ import Navbar from "@/components/Navbar";
 import Background from "@/components/ui/Background";
 import "@/app/globals.css";
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
+import { Manrope, JetBrains_Mono } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin", "cyrillic"], variable: "--font-inter" });
-const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono" });
+const grotesk = Manrope({ subsets: ["latin", "cyrillic"], variable: "--font-grotesk" });
+const mono = JetBrains_Mono({ subsets: ["latin", "cyrillic"], variable: "--font-mono" });
 
 export const metadata: Metadata = {
-  title: "gr33njj — Multitool Engineer",
-  description: "Backend, DevOps, Frontend. Turning flexibility into production-ready results.",
+  title: "gr33njj.dev — Every facet of your product, one engineer",
+  description:
+    "Frontend, backend, architecture, design — handled end to end. I turn raw ideas into products that look expensive and ship on time.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.variable} ${mono.variable} bg-background text-white overflow-x-hidden`}>
+      <body className={`${grotesk.variable} ${mono.variable} bg-background text-foreground overflow-x-hidden font-sans`}>
         <LanguageProvider>
           <Background />
           <Navbar />
-          <main>{children}</main>
-          <footer className="py-8 text-center text-zinc-600 text-sm font-mono border-t border-white/5">
-            © {new Date().getFullYear()} gr33njj.dev
+          <main className="relative z-[1]">{children}</main>
+          <footer className="relative z-[1] flex flex-wrap items-center justify-between gap-4 border-t border-line px-5 py-10 sm:px-10 lg:px-16">
+            <span className="font-mono text-[13px] text-muted-faint">
+              gr33njj<span className="text-accent-hover">.dev</span> © {new Date().getFullYear()}
+            </span>
+            <span className="font-mono text-xs text-muted-ghost">сделано с 💜 by gr33njj</span>
           </footer>
         </LanguageProvider>
       </body>
     </html>
   );
 }
-
-
