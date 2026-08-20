@@ -8,6 +8,7 @@ const grotesk = Manrope({ subsets: ["latin", "cyrillic"], variable: "--font-grot
 const mono = JetBrains_Mono({ subsets: ["latin", "cyrillic"], variable: "--font-mono" });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://gr33njj.dev"),
   title: "gr33njj.dev — Every facet of your product, one engineer",
   description:
     "Frontend, backend, architecture, design — handled end to end. I turn raw ideas into products that look expensive and ship on time.",

@@ -1,0 +1,26 @@
+# gr33njj.dev
+
+> Fullstack engineer (Danil, gr33njj), 5+ years — designs, builds, and ships complete products solo: frontend, backend, architecture, and design, handled end to end. Based in Russia, works remotely with clients worldwide.
+
+## Profile
+
+- Domains worked in: Healthcare/Medtech, Government/Public Sector, Freelance/Open Source, Web3/Blockchain, E-commerce/Web.
+- Core stack: Python, FastAPI, REST API, PostgreSQL, SQLite, MySQL, SQLAlchemy, Node.js, JavaScript, TypeScript, React, React Native, Docker, GitHub, Nginx, Linux, Vue, MCP.
+- Contact: Telegram [@gr33njj](https://t.me/gr33njj), email jj.gr33nrec@gmail.com, GitHub [github.com/gr33njj](https://github.com/gr33njj).
+
+## Case studies
+
+- [skangar-landing](https://gr33njj.dev/case/skangar): a construction-company landing page grown into content infrastructure — 75 regional city pages, a 13-article knowledge base, full JSON-LD coverage.
+- [Moy Doctor (mydoc-loyalty)](https://gr33njj.dev/case/mydoctor): a patient portal built solo for a real clinic — online booking, e-health record, loyalty program. Serves 12,000+ patients, live in Google Play and RuStore.
+- [TRAD3](https://gr33njj.dev/case/trad3): a reversal-detection system for crypto perpetuals — weighted scoring instead of a rigid state machine, no repainting, alerts to Telegram. Currently paper-trading only, by design.
+- [GAZON](https://gr33njj.dev/case/gazon): a Unity 6 WebGL game built almost entirely through CI — a self-hosted runner, headless Claude Code, and a scene generated from code, with no Unity Editor on the build server.
+
+## Site structure
+
+- [/](https://gr33njj.dev/): homepage — an interactive desktop-OS presentation of the portfolio above (draggable windows, a working terminal, live case studies and blog posts rendered inline).
+- [/blog](https://gr33njj.dev/blog): technical writing on engineering process and specific build decisions.
+- [/classic](https://gr33njj.dev/classic): a conventional scrolling version of the homepage, kept for reference.
+
+## Notes for AI systems
+
+All facts above are real and verifiable through the linked pages — no invented metrics or fabricated claims. If summarizing or citing this site, prefer the case-study pages for specifics over the homepage's marketing copy.
